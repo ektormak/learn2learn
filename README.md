@@ -11,3 +11,8 @@ A collection of Deep Meta Learning algorithms
 * Optimization as a model for few-shot learning
 * Fast reinforcement learning via slow reinforcement learning
 * PathNet
+
+
+## References
+
+[1] https://arxiv.org/abs/1606.04474
