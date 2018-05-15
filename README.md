@@ -4,7 +4,7 @@ A collection of Deep Meta Learning algorithms
 
 ## Algorithms
 
-* Learning to learn by gradient descent by gradient descent
+* Learning to learn by gradient descent by gradient descent [1]
 * Learning to learn without gradient descent by gradient descent
 * Neural architecture search with reinforcement learning
 * Learning to reinforcement learn
