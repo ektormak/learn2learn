@@ -1,0 +1,36 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage{relsize}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\newcommand*{\vertbar}{\rule[1ex]{0.5pt}{2.5ex}}
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}}
+\usepackage{algorithm}% use sudo apt-get install texlive-science
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+\begin{document}
+
+\title{Meta Learning overview}
+\maketitle
+\tableofcontents
+
+
+\section{Learning to learn by gradient descent by gradient descent}
+$f$ is the objective function which we try to optimize by training an optimizee with parameters $\theta$. We do so by using an optimizer $g$ that determines how $f$ should update the params given the gradient information:
+
+$\theta_{t+1} = \theta_{t} + g_{t}(\nabla f(\theta_{t}), \phi)$
+
+We basically have an LSTM that we train with param trajectories $\theta_{0}, \theta_{1}, \ldots$ as inputs and the gradient information, how to propose the next update of the parameter $\theta_{t+1}$.
+
+The paper uses a `Coordinatewise LSTM optimizer`:
+
+
+To make the learning problem computationally tractable, we update the optimzee parameters coordinatewise, much like other successful optimization methods such as Adam, RMSprop, and AdaGrad.
+To this end, we create nn LSTM cells, where nn is the number of dimensions of the parameter of the objective function. We setup the architecture so that the parameters for LSTM cells are shared, but each has a different hidden state.
+
+The coordinatewise architecture above treats each dimension independently, which ignore the effect of the correlations between coordinates. To address this issue, the paper introduces more sophisticated methods. The following two models allow different LSTM cells to communicate each other.
+
+\end{document}
