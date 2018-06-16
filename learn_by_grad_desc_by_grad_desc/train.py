@@ -14,7 +14,7 @@ def train_optimizer(N=10, n_unroll=20, num_of_coordinates=3, hidden_size=5, n_fe
     """Implementation of Learning to learn by gradient descent by gradient descent https://arxiv.org/abs/1606.04474
 
     Args:
-        N: number of datapoint/taskss i.e samples of loss functions, total loss will be averaged over N.
+        N: number of datapoint/tasks i.e samples of loss functions, total loss will be averaged over N.
         n_unroll: number of gradient optimizee steps
         num_of_coordinates: the dimension of optimizee params
         hidden_size: number of hidden units of LSTM
